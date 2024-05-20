@@ -1,0 +1,8 @@
+<div>
+    <!--the #s is the refrence in the s.value-->
+    <!--we need to show the the search value inside the input-->
+    <input #s type="text" placeholder="Search Food Mine!"
+     (keyup.enter)="search(s.value)" 
+     [value]="searchTerm"/>
+    <button (click)="search(s.value)">search</button>
+</div>
