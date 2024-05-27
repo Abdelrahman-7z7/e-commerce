@@ -1,0 +1,15 @@
+<input-container [label]="label">
+        
+                <!--the formControlName should match the name in the login-page.components.ts inside the ngOnInit method -->
+                <input 
+                    [type]="type"
+                    [placeholder]="label"
+                    [formControl]="formControl"
+                />
+                <!--controlling the possible errors-->
+                <input-validation
+                [control]="control"
+                [showErrorWhen]="showErrorWhen"
+                ></input-validation>
+
+</input-container>

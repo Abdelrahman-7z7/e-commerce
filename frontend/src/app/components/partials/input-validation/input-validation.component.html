@@ -1,0 +1,28 @@
+<!--controlling the possible errors-->
+<div class="errors-list" *ngIf="errorMessages && showErrorWhen">
+    <!-- <div *ngIf="fc.email.errors.required">
+        should not be empty
+    </div>
+    <div *ngIf="fc.email.errors.email">
+        Email is not correct
+    </div> -->
+
+    <div *ngFor="let errorMessage of errorMessages">
+        {{errorMessage}}
+    </div>
+
+
+    <!-- <div class="input-container">
+                <label>Password</label>
+                <div>
+                    <input type="password" placeholder="Password" formControlName="password"/>
+                </div>
+
+                <div class="errors-list" *ngIf="fc.password.errors && isSubmitted">
+                    <div *ngIf="fc.password.errors.required">
+                        should not be empty
+                    </div>
+                </div>
+
+            </div> -->
+</div>

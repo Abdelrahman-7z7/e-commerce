@@ -1,0 +1,5 @@
+# making the git ignore the node_modules file that should not be committed inside github repository 
+# the name should match the file  
+node_modules
+.env
+built

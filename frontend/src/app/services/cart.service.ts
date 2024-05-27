@@ -53,10 +53,16 @@ export class CartService {
 
   //The 'Observable' type represents a stream of values over time. It's used extensively in Angular for handling asynchronous data such as HTTP requests, and event handling.
 
-  // we send it as observable bacause if we send the subject to the outside we could be able to change the value of the subject from outside of the card service, we dont want this to happen bacause any changes to the cart should happen inside the cart series.
+  // we send it as observable because if we send the subject to the outside we could be able to change the value of the subject from outside of the card service, we dont want this to happen bacause any changes to the cart should happen inside the cart series.
 
   getCartObservable():Observable<cart>{
     return this.cartSubject.asObservable();
+  }
+
+  // the cartSubject always keeps the latest value of the cart
+  // we don't need to work with cartObservable when we want the latest value only
+  getCart():cart{
+    return this.cartSubject.value;
   }
 
   // we need to preserve the card at the local storage and another method to get the cart from the local storage in case of any refresh to the browser

@@ -1,0 +1,6 @@
+<div class="container">
+    <button *ngIf="!readonly" class="find-location" (click)="findMyLocation()">
+        Find My Location
+    </button>
+    <div class="mapContainer" #mapElement id="map" (mouseenter)="onClick()"></div>
+</div>
