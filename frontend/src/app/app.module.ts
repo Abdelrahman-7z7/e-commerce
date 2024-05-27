@@ -29,6 +29,10 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
+import { FooterComponent } from './components/partials/footer/footer.component';
+import { FeatureSectionComponent } from './components/partials/feature-section/feature-section.component';
+import { ImageSliderComponent } from './components/partials/image-slider/image-slider.component';
+import { NewSeasonComponent } from './components/partials/new-season/new-season.component';
 
 
 
@@ -57,7 +61,11 @@ import { OrderTrackPageComponent } from './components/pages/order-track-page/ord
     MapComponent,
     PaymentPageComponent,
     PaypalButtonComponent,
-    OrderTrackPageComponent
+    OrderTrackPageComponent,
+    FooterComponent,
+    FeatureSectionComponent,
+    ImageSliderComponent,
+    NewSeasonComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +77,7 @@ import { OrderTrackPageComponent } from './components/pages/order-track-page/ord
       timeOut:3000,
       positionClass:'toast-bottom-right',
       newestOnTop: false 
-    })
+    }),
   ],
 
   providers: [
@@ -77,6 +85,6 @@ import { OrderTrackPageComponent } from './components/pages/order-track-page/ord
     {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true},
     {provide:HTTP_INTERCEPTORS, useClass:LoadingInterceptor, multi:true},
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

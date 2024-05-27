@@ -5,10 +5,18 @@ div{
 }
 
 div a{
-    background-color: #f0f0f0;
+    background-color: #31363F;
     padding: 0.3rem 1rem;
-    margin: 0.2rem 0.15rem;
+    margin: 0.2rem 0.3rem;
     border-radius: 10rem;
     font-weight: 600;
-    color: blue;
+    color: #EEEEEE;
+    border: solid 1px #EEEEEE;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Apply transition to color and background-color */
+
+}
+
+div a:hover{
+    background-color: #EEEEEE;
+    color: #31363F;
 }

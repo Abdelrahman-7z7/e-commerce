@@ -1,6 +1,6 @@
 <header>
     <div class="container">
-        <a routerLink="/" class="logo">Food Mine!</a>
+        <a routerLink="/" class="logo">FOOD TRUCK!</a>
         <nav>
             <ul>
                 <!--<li *ngIf="!isAuth">-->
@@ -16,10 +16,11 @@
                         <a (click)="logout()">Logout</a>
                     </div>
                 </li>
-                <li>
-                    <a routerLink="/cart-page">
+                <li class="cart-icon">
+                    <a style="padding-bottom: 8px;" routerLink="/cart-page">
                         <!--if the cartQuantity is zero then it wont be shown-->
-                        Cart <span *ngIf="cartQuantity" >{{cartQuantity}}</span>
+                        <img src="./assets/shopping-cart.png" alt="">
+                         <span *ngIf="cartQuantity" >{{cartQuantity}}</span>
                     </a>
                 </li>
             </ul>

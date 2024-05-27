@@ -1,0 +1,48 @@
+<footer>
+    <div class="footerLeft">
+
+        <div class="footerMenu" *ngFor="let footer_element of footerElements">
+
+            <h1 class="title">{{footer_element.title}}</h1>            
+            <ul class="fMenuList">
+                <li class="fListItem" *ngFor="let item of footer_element.footer_list">{{item}}</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footerRight">
+
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+                <div class="fMail">
+                    <input type="text" placeholder="your@gmail.com" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div> 
+
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Follow Us</h1>
+                <div class="fIcons">
+                    <a href="https://twitter.com/abdulrahman_z7z" target="_blank">
+                        <img src="./assets/twitter.png" alt="" class="fIcon">
+                    </a>
+                    
+
+                    <a href="https://www.instagram.com/abdelrahman_7z?igsh=Nnd4OW9pc2VxbGEy&utm_source=qr" target="_blank">
+                        <img src="./assets/instagram.png" alt="" class="fIcon">
+                    </a>
+                    
+                    <a href="whatsapp://send?phone=+905436978152" target="_blank">
+                        <img src="./assets/whatsapp.png" alt="" class="fIcon">
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="footerRightMenu">
+                <span class="copyright"> &#64;Elorabi. All rights reserved. 2024.</span>
+            </div>
+    </div>
+</footer>

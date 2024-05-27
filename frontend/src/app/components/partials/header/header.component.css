@@ -1,16 +1,22 @@
+*{
+    transition: all 0.3s ease-in-out;
+    font-size: large;
+
+}
+
 header{
     position: relative;
-    background: white;
+    background: #222831;
     padding: 0;
-    border-bottom: 1px solid #e72929;
+    /* border-bottom: 1px solid #EEEEEE; */
 }
 
 a{
-    color: #af1313;
+    color: #EEEEEE;
 }
 
 a:hover{
-    background: #e72929;
+    background: #31363F;
     color: white;
     cursor: pointer;
 }
@@ -37,13 +43,6 @@ ul a{
     display: inline-block;
 }
 
-a span{
-    background: #ff4d4d;
-    color: white;
-    border-radius: 100rem;
-    padding: 0.1rem 0.45rem;
-    font-size: 0.9rem;
-}
 
 .menu-container{
     position: relative;
@@ -52,11 +51,12 @@ a span{
 .menu{
     position: absolute;
     z-index: 1;
-    background: whitesmoke;
+    background: #222831;
     display: none;
 }
 
 .menu-container:hover .menu{
+    border: solid 0.5px #222831;
     display: block;
 }
 
@@ -64,3 +64,30 @@ a span{
     width: 100%;
     min-width: 8rem;
 }
+
+.cart-icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 10px;
+}
+
+a span{
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: #EEEEEE;
+    color: black;
+    border-radius: 100rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.7rem;  
+}
+

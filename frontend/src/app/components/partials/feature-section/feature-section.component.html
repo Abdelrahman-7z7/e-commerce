@@ -1,0 +1,9 @@
+<div class="features">
+
+    <div class="feature" *ngFor="let item of features" >
+        <img [src]="item.url" alt="" class="featureIcon">
+        <span class="featureTitle">{{item.title}}</span>
+        <span class="featureDesc">{{item.description}}</span>
+    </div>
+
+</div>

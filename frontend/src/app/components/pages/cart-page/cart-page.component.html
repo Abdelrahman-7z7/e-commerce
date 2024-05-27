@@ -9,14 +9,17 @@
 <div *ngIf="cart && cart.items.length" class="container">
     <ul>
         <li *ngFor="let cartItem of cart.items">
+           
             <div>
                 <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
             </div>
+            
             <div>
                 <a routerLink="/food/{{cartItem.food.id}}">
                     {{cartItem.food.name}}
                 </a>
             </div>
+           
             <div>
                 <select #quantitySelect
                 [value]="cartItem.quantity"
@@ -40,11 +43,39 @@
         </li>
     </ul>
 
-    <div class="checkout">
+    <!-- <div class="checkout">
         <div class="foods-count">{{cart.totalCount}}</div>
         <div class="total-price">{{cart.totalPrice | currency}}</div>
 
         <a routerLink="/checkout">Proceed to Checkout</a>
+    </div> -->
+
+    <div class="itemPriceFixed">
+        <div class="itemPrice">
+
+            <span class="pTitle">Order Summary</span>
+
+            <div class="pSubtotal">
+                <span class="psTitle">Subtotal ({{cart.totalCount}})</span>
+                <span class="psPrice">{{cart.totalPrice | currency}}</span>
+            </div>
+
+            <div class="pShipping">
+                <span>Shipping Details</span>
+                <span>Free</span>
+            </div>
+
+            <hr>
+
+            <div class="totalPrice">
+                <span><b>Total</b> (inclusive of VAT)</span>
+                <span class="tpNumber">{{cart.totalPrice | currency}}</span>
+            </div>
+
+            <button class="checkoutBtn" routerLink="/checkout">Check out</button>
+        </div>
     </div>
 
 </div>
+
+<app-footer></app-footer>

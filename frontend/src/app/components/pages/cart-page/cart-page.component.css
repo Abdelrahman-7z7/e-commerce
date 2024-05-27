@@ -1,20 +1,25 @@
+*{
+    transition: all 0.3s ease-in-out;
+}
 .container{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     margin: 1.5rem;
     margin-top: 0.5rem;
+    margin-bottom: 8rem;
 }
 
 ul{
+    background-color: #f8f8f8;
     display: flex;
     flex-direction: column;
     flex: 3 0;
     justify-content: space-evenly;
-    border: 1px solid #ffbbbb;
+    /* border: 1px solid #a2a9b4; */
     border-radius: 1rem;
     list-style: none;
-    margin: 0.5rem;
+    margin: 0.5rem 2rem;
     padding: 0;
 }
 
@@ -56,16 +61,17 @@ li select{
 
 
 li .remove-button{
-    border-radius: 1rem;
-    border: none;
+    border-radius: 1.5rem;
+    border: solid 1px #222831;
     padding: 0.5rem;
-    color: #e72929;
-    opacity: 0.7;
+    color: #EEEEEE;
     outline: none;
+    background-color: #222831;
 }
 
 li .remove-button:hover{
-    opacity: 1;
+    background-color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -123,4 +129,90 @@ li .remove-button:hover{
 .checkout a:hover{
     opacity: 1;
     cursor: pointer;
+}
+
+/*item's price section*/
+.itemPriceFixed{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 40%;    
+    margin-top: 0.5rem;
+}
+
+.itemPrice{
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 55vh;
+    height: fit-content;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+}
+
+
+.pTitle{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: rgb(66, 66, 66);
+}
+
+.pSubtotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px;
+    color: rgb(99, 98, 98);
+}
+
+.pShipping{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px;
+    color: rgb(99, 98, 98);
+}
+
+hr{ 
+    margin-top: 1.5rem;
+    color: black;
+    height: 2px;
+    width: 95%;
+}
+
+.totalPrice{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    color: rgb(99, 98, 98);
+}
+
+.totalPrice b{
+    color: black;
+    letter-spacing: 1px;
+}
+
+.tpNumber{
+    color: black;
+    font-weight: 600;
+}
+
+.checkoutBtn{
+    color: white;
+    background-color: #222831;
+    border: 2px solid #222831;
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkoutBtn:hover{
+    background-color: white;
+    color: black;
 }

@@ -1,8 +1,14 @@
+*{
+    transition: ease 0.3s;
+    
+}
+
 div{
     display: flex;
     justify-content: center;
     margin-top: 3rem;
     margin-bottom: 1.5rem;
+    
 }
 
 input{
@@ -10,11 +16,15 @@ input{
     border: none;
     height: 3rem;
     width: 20rem;
-    background-color: #f1f1f1;
+    background-color: whitesmoke;
     padding: 1.2rem;
     font-size: 1.1rem;
     font-weight: 500;
     outline: none;
+}
+
+input:focus{
+    border: solid 1px #31363F;
 }
 
 div button{
@@ -24,14 +34,14 @@ div button{
     font-size: 1rem;
     border-radius: 0 10rem 10rem 0;
     border: none;
-    background-color: #e72929;
-    color: white;
-    opacity: 0.8;
+    background-color: #222831;
+    color: #EEEEEE;
     outline: none;
-    
 }
 
 div button:hover{
+    background-color: #1f2b3d;
+    /* border: solid 1px #222831; */
+    color: #ffffff;
     cursor: pointer;   
-    opacity: 1;
 }
